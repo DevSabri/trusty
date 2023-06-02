@@ -1,0 +1,236 @@
+/* Define variables */
+:root {
+    --animation-duration: 1s;
+    --animation-delay: 1s;
+    --image-width: 200px;
+    --image-width-smartphone: 200px;
+}
+
+.sabri_container{
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.wael_container{
+  display: none;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.budget_container{
+  display: none;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.container {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.container .img_container img {
+    width: var(--image-width);
+    transition: transform var(--animation-duration) ease, opacity var(--animation-duration) ease;
+}
+  
+  .container .img_container img:hover {
+    transform: scale(1.09);
+}
+  
+
+
+
+
+
+
+
+
+.img_container{
+  width: 320px;
+  height: 320px;
+  position: relative;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cercle {
+
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  backdrop-filter: blur(4px) saturate(181%);
+  -webkit-backdrop-filter: blur(4px) saturate(181%);
+  background-color: rgba(255, 255, 255, 0.28);
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.card-container{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card{
+  width: 40%;
+  height: max-content;
+  padding: 30px 10px;
+  backdrop-filter: blur(4px) saturate(181%);
+  -webkit-backdrop-filter: blur(4px) saturate(181%);
+  background-color: rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.card ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.card ul li{
+  list-style: disc;
+  font-weight: bold;
+  list-style-position: inside;
+  line-height: 1.3rem;
+}
+
+
+.sabri_name{
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 25px;
+  color: rgb(48, 44, 44);
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 280px;
+}
+
+.scroll{
+  margin-right: 40px;
+  margin-top: 25px;
+}
+
+.scroll_two{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.scroll_button{
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.60);
+  cursor: pointer;
+  animation: shake 1s ease-in-out 0s infinite;
+}
+
+.budget{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px 20px;
+}
+
+.budget span{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.section{
+  width: 50%;
+  height: max-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  backdrop-filter: blur(4px) saturate(181%);
+  -webkit-backdrop-filter: blur(4px) saturate(181%);
+  background-color: rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.panel {
+  backdrop-filter: blur(4px) saturate(181%);
+  -webkit-backdrop-filter: blur(4px) saturate(181%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  width: 50%
+}
+
+.panel ul{
+  padding: 10px 20px;
+}
+
+.panel ul li{
+  list-style: none;
+  text-align: left;
+}
+
+
+
+
+
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(0, -5px); }
+  50% { transform: translate(0, 5px); }
+  75% { transform: translate(0, -5px); }
+  100% { transform: translate(0, 0); }
+}
+
+
+@media screen and (max-width: 767px) {
+    /* Styles for smartphones */
+    .container .img_container img {
+      width: var(--image-width-smartphone);
+    }
+
+    .card{
+      width: 80%;
+    }
+
+    .budget{
+      width: 80%;
+    }
+
+    .section{
+      width: 80%;
+    }
+
+    .panel{
+      width: 80%;
+    }
+  }

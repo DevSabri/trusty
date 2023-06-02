@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem; /* Adjust the width as needed */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: transparent; /* Make the thumb transparent */
+  }
